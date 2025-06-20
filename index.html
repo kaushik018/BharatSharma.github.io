@@ -867,6 +867,188 @@
 				color: #222;
 				font-weight: 600;
 			}
+
+			/* Email Modal Styles */
+			.email-modal {
+				position: fixed;
+				z-index: 10000;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.5);
+				backdrop-filter: blur(5px);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				opacity: 0;
+				visibility: hidden;
+				transition: all 0.3s ease;
+			}
+
+			.email-modal.show {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			.email-modal-content {
+				background: #ffffff;
+				border-radius: 12px;
+				box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+				width: 90%;
+				max-width: 600px;
+				max-height: 80vh;
+				overflow-y: auto;
+				transform: scale(0.7);
+				transition: transform 0.3s ease;
+			}
+
+			.email-modal.show .email-modal-content {
+				transform: scale(1);
+			}
+
+			.email-modal-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 1.5em 2em;
+				border-bottom: 1px solid #e9ecef;
+				background: linear-gradient(135deg, var(--primary-color) 0%, #5cc6a7 100%);
+				color: white;
+				border-radius: 12px 12px 0 0;
+			}
+
+			.email-modal-header h3 {
+				margin: 0;
+				color: white;
+				font-size: 1.3em;
+			}
+
+			.email-modal-close {
+				font-size: 1.5em;
+				cursor: pointer;
+				transition: transform 0.3s ease;
+			}
+
+			.email-modal-close:hover {
+				transform: scale(1.2);
+			}
+
+			.email-modal-body {
+				padding: 2em;
+			}
+
+			.email-preview {
+				background: #f8f9fa;
+				border-radius: 8px;
+				padding: 1.5em;
+				margin-bottom: 2em;
+				border: 1px solid #e9ecef;
+			}
+
+			.email-field {
+				margin-bottom: 1em;
+				padding-bottom: 0.5em;
+				border-bottom: 1px solid #e9ecef;
+			}
+
+			.email-field:last-child {
+				border-bottom: none;
+				margin-bottom: 0;
+			}
+
+			.email-field strong {
+				color: #333;
+				display: inline-block;
+				width: 80px;
+			}
+
+			.email-message {
+				margin-top: 0.5em;
+				white-space: pre-line;
+				line-height: 1.6;
+				color: #555;
+				background: white;
+				padding: 1em;
+				border-radius: 4px;
+				border: 1px solid #ddd;
+			}
+
+			.email-options h4 {
+				margin-bottom: 1em;
+				color: #333;
+				font-size: 1.1em;
+			}
+
+			.email-buttons {
+				display: flex;
+				flex-direction: column;
+				gap: 1em;
+			}
+
+			.email-btn {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 0.8em;
+				padding: 1em 1.5em;
+				border: none;
+				border-radius: 8px;
+				font-size: 1em;
+				font-weight: 600;
+				cursor: pointer;
+				transition: all 0.3s ease;
+				text-decoration: none;
+				color: white;
+			}
+
+			.gmail-btn {
+				background: linear-gradient(135deg, #ea4335 0%, #d93025 100%);
+			}
+
+			.gmail-btn:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 8px 25px rgba(234, 67, 53, 0.3);
+			}
+
+			.mailto-btn {
+				background: linear-gradient(135deg, var(--primary-color) 0%, #5cc6a7 100%);
+			}
+
+			.mailto-btn:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 8px 25px rgba(73, 191, 157, 0.3);
+			}
+
+			.copy-btn {
+				background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+			}
+
+			.copy-btn:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 8px 25px rgba(108, 117, 125, 0.3);
+			}
+
+			@media screen and (max-width: 768px) {
+				.email-modal-content {
+					width: 95%;
+					margin: 1em;
+				}
+
+				.email-modal-header,
+				.email-modal-body {
+					padding: 1.2em;
+				}
+
+				.email-buttons {
+					gap: 0.8em;
+				}
+
+				.email-btn {
+					padding: 0.8em 1.2em;
+					font-size: 0.9em;
+				}
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -1001,17 +1183,17 @@
 									<div class="timeline-title">AI/ML Developer Intern</div>
 									<div class="timeline-subtitle">ARK Infosolutions Pvt. Ltd., Remote</div>
 									<div class="timeline-description">
-										<p class="role-description">At ARK Infosolutions, I'm leading the design and development of AI-powered, interactive applications built on Unity for the Architecture, Engineering, and Construction (AEC) industry. These tools aim to enhance spatial understanding and client engagement by embedding machine learning models into immersive 3D/VR environments.</p>
+										<p class="role-description">Leading development of AI-powered Unity applications for the AEC industry, integrating machine learning models into 3D/VR environments to enhance spatial understanding and client engagement.</p>
 										
-										<h4>Key Highlights:</h4>
+										<h4>Key Achievements:</h4>
 										<ul>
-											<li>Developed custom Unity applications that integrate real-time data pipelines and AI decision-making models, enabling architects and engineers to simulate scenarios and gain insights before implementation</li>
-											<li>Connected Unity environments with cloud-based data sources, allowing real-time updates and synchronized visualization</li>
-											<li>Led conceptualization from scratch, transforming raw ideas into functional prototypes, showcasing end-to-end product development skills</li>
+											<li>Built Unity applications with real-time data pipelines and AI decision models</li>
+											<li>Connected 3D environments with cloud data sources for live visualization</li>
+											<li>Led end-to-end product development from concept to functional prototypes</li>
 										</ul>
 										
 										<div class="role-insight">
-											💡 This role blends creativity and technical precision — crafting data-driven visual tools that turn abstract models into real-world decisions.
+											💡 Blending creativity with technical precision to turn abstract models into real-world decisions.
 										</div>
 									</div>
 									<div class="tech-stack">
@@ -1031,18 +1213,18 @@
 									<div class="timeline-title">Undergraduate Research Assistant – IoT-Based Health & Environment Monitoring</div>
 									<div class="timeline-subtitle">The University of Toledo, Toledo, OH</div>
 									<div class="timeline-description">
-										<p class="role-description">As part of a university-led research initiative, I engineered a portable IoT monitoring system to track both environmental and biometric data. The goal was to create a real-time, remotely accessible health dashboard suitable for urban use cases.</p>
+										<p class="role-description">Engineered a portable IoT monitoring system for tracking environmental and biometric data, creating a real-time health dashboard accessible to 100+ users.</p>
 										
-										<h4>Key Highlights:</h4>
+										<h4>Key Achievements:</h4>
 										<ul>
-											<li>Developed a system using ESP32 microcontrollers to capture heart rate, temperature, and air quality from sensors (BME688, BMI270, Pulse Sensor)</li>
-											<li>Implemented sensor fusion algorithms that improved signal reliability and data accuracy by 25%</li>
-											<li>Leveraged the Blynk IoT platform to allow over 100 users to access real-time visualizations of their personal and environmental health data</li>
-											<li>Authored a detailed hardware and software architecture guide, reducing prototyping time for future teams by 40%</li>
+											<li>Built ESP32 system capturing heart rate, temperature, and air quality data</li>
+											<li>Implemented sensor fusion algorithms improving data accuracy by 25%</li>
+											<li>Deployed Blynk IoT platform enabling real-time health visualizations</li>
+											<li>Created architecture guide reducing future prototyping time by 40%</li>
 										</ul>
 										
 										<div class="role-insight">
-											📱 This project combined my interests in healthcare tech and environmental science to design a scalable, cloud-connected sensing device.
+											📱 Combining healthcare tech and environmental science for scalable cloud-connected sensing.
 										</div>
 									</div>
 									<div class="tech-stack">
@@ -1062,18 +1244,18 @@
 									<div class="timeline-title">Teaching Assistant — UToledo Math Corps</div>
 									<div class="timeline-subtitle">The University of Toledo, Toledo, OH</div>
 									<div class="timeline-description">
-										<p class="role-description">As a Teaching Assistant for UToledo's Math Corps program, I mentored undergraduate students in Python programming and data analysis, helping them bridge the gap between theory and practical application through hands-on projects.</p>
+										<p class="role-description">Mentored undergraduate students in Python programming and data analysis, bridging theory and practical application through hands-on projects and personalized guidance.</p>
 										
-										<h4>Key Highlights:</h4>
+										<h4>Key Achievements:</h4>
 										<ul>
-											<li>Taught core concepts in Python and data visualization using Matplotlib, leading to a measurable 30% improvement in students' grades over the semester</li>
-											<li>Designed and delivered a custom curriculum on SQL and basic database management, incorporating real-world datasets to demonstrate practical data skills</li>
-											<li>Led project-based learning sessions via Google Colab, enabling students to experiment with live code and build analytical thinking through exploratory data tasks</li>
-											<li>Provided one-on-one mentorship to students, helping them troubleshoot code and understand applied computing logic</li>
+											<li>Taught Python and Matplotlib, achieving 30% grade improvement</li>
+											<li>Designed SQL curriculum with real-world datasets</li>
+											<li>Led Google Colab sessions for live coding and analysis</li>
+											<li>Provided one-on-one mentorship for technical problem-solving</li>
 										</ul>
 										
 										<div class="role-insight">
-											🎓 This experience refined my ability to communicate technical topics clearly, foster student curiosity, and create curriculum that makes abstract concepts tangible.
+											🎓 Refined ability to communicate complex technical concepts clearly and foster student curiosity.
 										</div>
 									</div>
 									<div class="tech-stack">
@@ -1093,17 +1275,17 @@
 									<div class="timeline-title">Azure Active Directory Intern</div>
 									<div class="timeline-subtitle">Park Place Technologies, Remote</div>
 									<div class="timeline-description">
-										<p class="role-description">During my time at Park Place Technologies, I contributed to streamlining identity and access management systems across enterprise applications by integrating Microsoft Azure APIs with internal and external services.</p>
+										<p class="role-description">Streamlined identity and access management systems by integrating Microsoft Azure APIs with enterprise applications and external services.</p>
 										
-										<h4>Key Highlights:</h4>
+										<h4>Key Achievements:</h4>
 										<ul>
-											<li>Automated identity workflows by integrating Azure Active Directory (AAD) with third-party applications and external security providers, reducing integration time by 30%</li>
-											<li>Enhanced system security by building custom authentication modules that ensured compliance with corporate and regulatory standards</li>
-											<li>Participated in cross-functional security audits and assisted in deploying scalable identity policies using Azure Graph API</li>
+											<li>Automated identity workflows reducing integration time by 30%</li>
+											<li>Built custom authentication modules ensuring compliance standards</li>
+											<li>Participated in security audits and deployed scalable identity policies</li>
 										</ul>
 										
 										<div class="role-insight">
-											🔐 I developed a solid foundation in enterprise-grade security systems and the real-world challenges of identity lifecycle management.
+											🔐 Developed foundation in enterprise-grade security systems and identity lifecycle management.
 										</div>
 									</div>
 									<div class="tech-stack">
@@ -1240,7 +1422,7 @@
 						<div class="row">
 							<div class="col-8 col-12-small">
 								<div class="contact-form-container">
-									<form method="POST" action="https://formspree.io/f/xpzgwqjz" class="contact-form">
+									<form method="POST" class="contact-form" id="contactForm">
 										<div class="form-row">
 											<div class="form-group">
 												<label for="name">Name</label>
@@ -1321,6 +1503,47 @@
 					</section>
 
 			</div>
+
+		<!-- Email Modal -->
+		<div id="emailModal" class="email-modal" style="display: none;">
+			<div class="email-modal-content">
+				<div class="email-modal-header">
+					<h3>Send Email</h3>
+					<span class="email-modal-close">&times;</span>
+				</div>
+				<div class="email-modal-body">
+					<div class="email-preview">
+						<div class="email-field">
+							<strong>To:</strong> bharat.sharma.cs05@gmail.com
+						</div>
+						<div class="email-field">
+							<strong>From:</strong> <span id="modalFromEmail"></span>
+						</div>
+						<div class="email-field">
+							<strong>Subject:</strong> <span id="modalSubject"></span>
+						</div>
+						<div class="email-field">
+							<strong>Message:</strong>
+							<div class="email-message" id="modalMessage"></div>
+						</div>
+					</div>
+					<div class="email-options">
+						<h4>Choose how to send:</h4>
+						<div class="email-buttons">
+							<button class="email-btn gmail-btn" onclick="openGmail()">
+								<i class="icon brands fa-google"></i> Open Gmail
+							</button>
+							<button class="email-btn mailto-btn" onclick="openMailto()">
+								<i class="icon solid fa-envelope"></i> Use Email Client
+							</button>
+							<button class="email-btn copy-btn" onclick="copyEmailContent()">
+								<i class="icon solid fa-copy"></i> Copy to Clipboard
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<!-- Footer -->
 			<footer id="footer">
@@ -1460,61 +1683,36 @@
 					const btnText = submitBtn.querySelector('.btn-text');
 					const btnIcon = submitBtn.querySelector('.btn-icon');
 					
+					// Get form data
+					const formData = new FormData(this);
+					const name = formData.get('name');
+					const email = formData.get('email');
+					const subject = formData.get('subject');
+					const message = formData.get('message');
+					
 					// Show loading state
-					btnText.textContent = 'Sending...';
+					btnText.textContent = 'Preparing Email...';
 					btnIcon.innerHTML = '<i class="icon solid fa-spinner fa-spin"></i>';
 					submitBtn.disabled = true;
 					
-					// Get form data
-					const formData = new FormData(this);
+					// Store form data globally for modal functions
+					window.emailData = {
+						name: name,
+						email: email,
+						subject: subject,
+						message: message
+					};
 					
-					// Submit to Formspree
-					fetch(this.action, {
-						method: 'POST',
-						body: formData,
-						headers: {
-							'Accept': 'application/json'
-						}
-					})
-					.then(response => {
-						if (response.ok) {
-							// Success
-							btnText.textContent = 'Message Sent!';
-							btnIcon.innerHTML = '<i class="icon solid fa-check"></i>';
-							submitBtn.style.background = 'linear-gradient(135deg, #28a745 0%, #20c997 100%)';
-							
-							// Reset form after 2 seconds
-							setTimeout(() => {
-								form.reset();
-								btnText.textContent = 'Send Message';
-								btnIcon.innerHTML = '<i class="icon solid fa-paper-plane"></i>';
-								submitBtn.style.background = 'linear-gradient(135deg, var(--primary-color) 0%, #5cc6a7 100%)';
-								submitBtn.disabled = false;
-								
-								// Remove focused class from all inputs
-								inputs.forEach(input => {
-									input.parentElement.classList.remove('focused');
-								});
-							}, 2000);
-						} else {
-							throw new Error('Network response was not ok');
-						}
-					})
-					.catch(error => {
-						// Error handling
-						console.error('Error:', error);
-						btnText.textContent = 'Error - Try Again';
-						btnIcon.innerHTML = '<i class="icon solid fa-exclamation-triangle"></i>';
-						submitBtn.style.background = 'linear-gradient(135deg, #dc3545 0%, #c82333 100%)';
+					// Show email modal
+					setTimeout(() => {
+						showEmailModal();
 						
-						// Reset button after 3 seconds
-						setTimeout(() => {
-							btnText.textContent = 'Send Message';
-							btnIcon.innerHTML = '<i class="icon solid fa-paper-plane"></i>';
-							submitBtn.style.background = 'linear-gradient(135deg, var(--primary-color) 0%, #5cc6a7 100%)';
-							submitBtn.disabled = false;
-						}, 3000);
-					});
+						// Reset button
+						btnText.textContent = 'Send Message';
+						btnIcon.innerHTML = '<i class="icon solid fa-paper-plane"></i>';
+						submitBtn.style.background = 'linear-gradient(135deg, var(--primary-color) 0%, #5cc6a7 100%)';
+						submitBtn.disabled = false;
+					}, 1000);
 				});
 
 				// Contact info hover animations
@@ -1530,7 +1728,97 @@
 						icon.style.transform = 'scale(1) rotate(0deg)';
 					});
 				});
+
+				// Email Modal functionality
+				const emailModal = document.getElementById('emailModal');
+				const modalClose = document.querySelector('.email-modal-close');
+
+				// Close modal when clicking X or outside
+				modalClose.addEventListener('click', hideEmailModal);
+				emailModal.addEventListener('click', function(e) {
+					if (e.target === emailModal) {
+						hideEmailModal();
+					}
+				});
+
+				// Close modal with Escape key
+				document.addEventListener('keydown', function(e) {
+					if (e.key === 'Escape' && emailModal.classList.contains('show')) {
+						hideEmailModal();
+					}
+				});
 			});
+
+			// Global functions for email modal
+			function showEmailModal() {
+				const modal = document.getElementById('emailModal');
+				const fromEmail = document.getElementById('modalFromEmail');
+				const subject = document.getElementById('modalSubject');
+				const message = document.getElementById('modalMessage');
+
+				// Populate modal with form data
+				fromEmail.textContent = window.emailData.email;
+				subject.textContent = window.emailData.subject;
+				message.textContent = `Name: ${window.emailData.name}\nEmail: ${window.emailData.email}\n\nMessage:\n${window.emailData.message}`;
+
+				// Show modal
+				modal.style.display = 'flex';
+				setTimeout(() => {
+					modal.classList.add('show');
+				}, 10);
+			}
+
+			function hideEmailModal() {
+				const modal = document.getElementById('emailModal');
+				modal.classList.remove('show');
+				setTimeout(() => {
+					modal.style.display = 'none';
+				}, 300);
+			}
+
+			function openGmail() {
+				const data = window.emailData;
+				const formattedMessage = `Name: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`;
+				const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=bharat.sharma.cs05@gmail.com&su=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(formattedMessage)}`;
+				
+				window.open(gmailLink, '_blank');
+				hideEmailModal();
+				
+				// Reset form
+				const form = document.querySelector('.contact-form');
+				form.reset();
+			}
+
+			function openMailto() {
+				const data = window.emailData;
+				const formattedMessage = `Name: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`;
+				const mailtoLink = `mailto:bharat.sharma.cs05@gmail.com?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(formattedMessage)}`;
+				
+				window.location.href = mailtoLink;
+				hideEmailModal();
+				
+				// Reset form
+				const form = document.querySelector('.contact-form');
+				form.reset();
+			}
+
+			function copyEmailContent() {
+				const data = window.emailData;
+				const emailContent = `To: bharat.sharma.cs05@gmail.com\nFrom: ${data.email}\nSubject: ${data.subject}\n\nName: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`;
+				
+				navigator.clipboard.writeText(emailContent).then(() => {
+					// Show success feedback
+					const copyBtn = document.querySelector('.copy-btn');
+					const originalText = copyBtn.innerHTML;
+					copyBtn.innerHTML = '<i class="icon solid fa-check"></i> Copied!';
+					copyBtn.style.background = 'linear-gradient(135deg, #28a745 0%, #20c997 100%)';
+					
+					setTimeout(() => {
+						copyBtn.innerHTML = originalText;
+						copyBtn.style.background = 'linear-gradient(135deg, #6c757d 0%, #5a6268 100%)';
+					}, 2000);
+				});
+			}
 			</script>
 			<script>
 			// Prevent Poptrox/lightbox for GitHub project links
