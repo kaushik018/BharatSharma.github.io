@@ -308,7 +308,7 @@
 				}
 
 				.timeline-content {
-					width: calc(100% - 50px);
+					width: calc(100% - 50px) !important;
 					margin-left: 50px !important;
 					margin-right: 0 !important;
 					padding: 1.2em;
@@ -317,14 +317,15 @@
 
 				.timeline-item:nth-child(odd) .timeline-content,
 				.timeline-item:nth-child(even) .timeline-content {
+					width: calc(100% - 50px) !important;
 					margin-left: 50px !important;
 					margin-right: 0 !important;
 				}
 
 				.timeline-item:nth-child(odd) .timeline-content::before,
 				.timeline-item:nth-child(even) .timeline-content::before {
-					left: -40px;
-					right: auto;
+					left: -40px !important;
+					right: auto !important;
 					width: 16px;
 					height: 16px;
 				}
@@ -387,7 +388,7 @@
 				}
 
 				.timeline-content {
-					width: calc(100% - 40px);
+					width: calc(100% - 40px) !important;
 					margin-left: 40px !important;
 					margin-right: 0 !important;
 					padding: 1em;
@@ -396,14 +397,15 @@
 
 				.timeline-item:nth-child(odd) .timeline-content,
 				.timeline-item:nth-child(even) .timeline-content {
+					width: calc(100% - 40px) !important;
 					margin-left: 40px !important;
 					margin-right: 0 !important;
 				}
 
 				.timeline-item:nth-child(odd) .timeline-content::before,
 				.timeline-item:nth-child(even) .timeline-content::before {
-					left: -32px;
-					right: auto;
+					left: -32px !important;
+					right: auto !important;
 					width: 14px;
 					height: 14px;
 				}
