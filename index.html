@@ -18,6 +18,13 @@
 				--timeline-color: #efefef;
 			}
 
+			@media screen and (max-width: 768px) {
+				:root {
+					--timeline-width: 1px;
+					--timeline-color: #ddd;
+				}
+			}
+
 			/* Hero Section Animations */
 			.hero-content {
 				margin-bottom: 2em;
@@ -143,6 +150,14 @@
 				border-radius: 8px;
 				box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 				position: relative;
+				transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+				border: 1px solid rgba(73, 191, 157, 0.1);
+			}
+
+			.timeline-content:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+				border-color: rgba(73, 191, 157, 0.3);
 			}
 
 			.timeline-content::before {
@@ -153,6 +168,11 @@
 				height: 20px;
 				background: var(--primary-color);
 				border-radius: 50%;
+				transition: transform 0.3s ease-out;
+			}
+
+			.timeline-content:hover::before {
+				transform: translateY(-50%) scale(1.2);
 			}
 
 			.timeline-item:nth-child(odd) .timeline-content {
@@ -284,17 +304,151 @@
 
 			@media screen and (max-width: 768px) {
 				.timeline::before {
-					left: 30px;
+					left: 20px;
 				}
 
 				.timeline-content {
-					width: calc(100% - 80px);
-					margin-left: 80px !important;
+					width: calc(100% - 50px);
+					margin-left: 50px !important;
+					padding: 1.2em;
+					margin-bottom: 2em;
 				}
 
 				.timeline-item:nth-child(odd) .timeline-content::before,
 				.timeline-item:nth-child(even) .timeline-content::before {
-					left: -60px;
+					left: -40px;
+					width: 16px;
+					height: 16px;
+				}
+
+				.timeline-title {
+					font-size: 1.1em;
+					line-height: 1.3;
+				}
+
+				.timeline-subtitle {
+					font-size: 0.9em;
+					margin-bottom: 0.8em;
+				}
+
+				.timeline-date {
+					font-size: 0.85em;
+					margin-bottom: 0.8em;
+				}
+
+				.role-description {
+					font-size: 0.9em;
+					line-height: 1.5;
+					margin-bottom: 1.2em;
+				}
+
+				.timeline-description h4 {
+					font-size: 1em;
+					margin: 1.2em 0 0.8em 0;
+				}
+
+				.timeline-description li {
+					font-size: 0.85em;
+					line-height: 1.4;
+					margin-bottom: 0.4em;
+					padding-left: 1.2em;
+				}
+
+				.role-insight {
+					font-size: 0.85em;
+					padding: 0.8em 1.2em;
+					margin: 1.2em 0;
+					line-height: 1.4;
+				}
+
+				.tech-stack {
+					font-size: 0.8em;
+					margin-top: 0.8em;
+				}
+
+				.timeline-toggle {
+					font-size: 0.8em;
+					padding: 0.4em 0.8em;
+					margin-top: 0.8em;
+				}
+			}
+
+			@media screen and (max-width: 480px) {
+				.timeline::before {
+					left: 15px;
+				}
+
+				.timeline-content {
+					width: calc(100% - 40px);
+					margin-left: 40px !important;
+					padding: 1em;
+					margin-bottom: 1.5em;
+				}
+
+				.timeline-item:nth-child(odd) .timeline-content::before,
+				.timeline-item:nth-child(even) .timeline-content::before {
+					left: -32px;
+					width: 14px;
+					height: 14px;
+				}
+
+				.timeline-title {
+					font-size: 1em;
+				}
+
+				.timeline-subtitle {
+					font-size: 0.85em;
+				}
+
+				.timeline-date {
+					font-size: 0.8em;
+				}
+
+				.role-description {
+					font-size: 0.85em;
+				}
+
+				.timeline-description h4 {
+					font-size: 0.95em;
+				}
+
+				.timeline-description li {
+					font-size: 0.8em;
+					padding-left: 1em;
+				}
+
+				.role-insight {
+					font-size: 0.8em;
+					padding: 0.7em 1em;
+				}
+
+				.tech-stack {
+					font-size: 0.75em;
+				}
+
+				.timeline-toggle {
+					font-size: 0.75em;
+					padding: 0.3em 0.7em;
+					min-height: 44px; /* Touch-friendly button size */
+				}
+
+				/* Touch-friendly improvements */
+				.timeline-content {
+					touch-action: manipulation;
+				}
+
+				.timeline-toggle {
+					touch-action: manipulation;
+					-webkit-tap-highlight-color: rgba(73, 191, 157, 0.2);
+				}
+
+				/* Better spacing for touch */
+				.timeline-item {
+					margin-bottom: 2.5em;
+				}
+
+				.timeline-description li {
+					margin-bottom: 0.6em;
 				}
 			}
 
